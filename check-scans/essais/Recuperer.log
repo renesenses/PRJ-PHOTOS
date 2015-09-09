@@ -1,0 +1,16 @@
+﻿Horodatage	NomFichier	Erreur	Message
+2015-09-02 16:22:38.015 +0200	Check-scans.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 63 bloc(s) à contrôler au total
+2015-09-02 16:22:38.081 +0200	Check-scans.fmp12	8432	La page 63 est marquée comme libre mais ne figure pas dans la liste libre
+2015-09-02 16:22:38.081 +0200	Check-scans.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 1187
+2015-09-02 16:22:38.085 +0200	Check-scans.fmp12	0	*** Contrôle de cohérence terminé, 63 bloc(s) contrôlé(s)
+2015-09-02 16:23:04.434 +0200	Scans4papa.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 368 bloc(s) à contrôler au total
+2015-09-02 16:23:04.440 +0200	Scans4papa.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 253106
+2015-09-02 16:23:04.441 +0200	Scans4papa.fmp12	0	*** Contrôle de cohérence terminé, 368 bloc(s) contrôlé(s)
+2015-09-03 11:25:51.586 +0200	Check-scans.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 63 bloc(s) à contrôler au total
+2015-09-03 11:25:51.656 +0200	Check-scans.fmp12	8432	La page 63 est marquée comme libre mais ne figure pas dans la liste libre
+2015-09-03 11:25:51.656 +0200	Check-scans.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 1187
+2015-09-03 11:25:51.661 +0200	Check-scans.fmp12	0	*** Contrôle de cohérence terminé, 63 bloc(s) contrôlé(s)
+2015-09-03 15:06:37.883 +0200	PosNeg.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 139 bloc(s) à contrôler au total
+2015-09-03 15:06:37.888 +0200	PosNeg.fmp12	8432	La page 139 est marquée comme libre mais ne figure pas dans la liste libre
+2015-09-03 15:06:37.888 +0200	PosNeg.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 25583
+2015-09-03 15:06:37.888 +0200	PosNeg.fmp12	0	*** Contrôle de cohérence terminé, 139 bloc(s) contrôlé(s)

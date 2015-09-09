@@ -1,0 +1,5 @@
+STATUS_ID,STATUS_KEY,STATUS_VALUE
+1,New,Créé
+2,On_check,En cours d'analyse
+3,Checked,Analysée
+4,Validated,Validée  

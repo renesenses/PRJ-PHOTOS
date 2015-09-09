@@ -1,0 +1,4 @@
+﻿Horodatage	NomFichier	Erreur	Message
+2015-09-03 13:45:47.268 +0200	Actifs.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 368 bloc(s) à contrôler au total
+2015-09-03 13:45:47.302 +0200	Actifs.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 253106
+2015-09-03 13:45:47.302 +0200	Actifs.fmp12	0	*** Contrôle de cohérence terminé, 368 bloc(s) contrôlé(s)

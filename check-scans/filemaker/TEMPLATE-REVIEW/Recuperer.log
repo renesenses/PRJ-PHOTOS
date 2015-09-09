@@ -1,0 +1,16 @@
+﻿Horodatage	NomFichier	Erreur	Message
+2015-09-03 15:50:58.946 +0200	Catalogue produits.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 290 bloc(s) à contrôler au total
+2015-09-03 15:50:58.950 +0200	Catalogue produits.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 52729
+2015-09-03 15:50:58.950 +0200	Catalogue produits.fmp12	0	*** Contrôle de cohérence terminé, 290 bloc(s) contrôlé(s)
+2015-09-03 15:56:19.955 +0200	Contacts.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 344 bloc(s) à contrôler au total
+2015-09-03 15:56:19.960 +0200	Contacts.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 186231
+2015-09-03 15:56:19.960 +0200	Contacts.fmp12	0	*** Contrôle de cohérence terminé, 344 bloc(s) contrôlé(s)
+2015-09-03 16:05:00.399 +0200	Gestion de contenu.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 727 bloc(s) à contrôler au total
+2015-09-03 16:05:00.404 +0200	Gestion de contenu.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 154450
+2015-09-03 16:05:00.404 +0200	Gestion de contenu.fmp12	0	*** Contrôle de cohérence terminé, 727 bloc(s) contrôlé(s)
+2015-09-05 09:43:42.993 +0200	Gestion des événements.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 781 bloc(s) à contrôler au total
+2015-09-05 09:43:43.069 +0200	Gestion des événements.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 305808
+2015-09-05 09:43:43.082 +0200	Gestion des événements.fmp12	0	*** Contrôle de cohérence terminé, 781 bloc(s) contrôlé(s)
+2015-09-05 10:10:18.610 +0200	Gestion des événements.fmp12	0	*** Contrôle de cohérence démarré sur un fichier incorrectement fermé, 781 bloc(s) à contrôler au total
+2015-09-05 10:10:18.677 +0200	Gestion des événements.fmp12	0	Réinitialiser numéro de séquence de bloc maximum à 305808
+2015-09-05 10:10:18.686 +0200	Gestion des événements.fmp12	0	*** Contrôle de cohérence terminé, 781 bloc(s) contrôlé(s)
