@@ -1,0 +1,31 @@
+3.- Fixing Faded Photos
+3.1- Using Levels
+3.2- Fixing fades with Threshold
+3.3- Adjusting contrast using Color Curves
+3.4- Darkening images with blend modes
+3.5- Adjusting brightness and contrast
+3.6- Using Quick Fix for lighting
+3.7- Fixing automatically with Guided Edit
+
+4.- Fixing Color Cast
+4.1- Using Levels to fix color
+4.2- Correcting color automatically with Enhance
+4.3- Correcting color with complementary colors
+4.4- Using Color Variations
+4.5- Using Quick Fix for color
+
+5.- Removing Dust, Spots, and Texture
+5.1- Using the Clone Stamp tool
+5.2- Using the Healing Brush
+5.3- Working with newspaper and magazine images
+5.4- Softening paper texture
+5.5- Taming fingerprints
+
+6.- Fixing Damaged and Torn Photos
+6.1- Repairing small rips and creases
+6.2- Repairing large tears
+6.3- Filling in missing pieces
+6.4- Reassembling a photo from pieces
+6.5- Fixing and replacing backgrounds
+6.6- Using Photomerge with panoramas
+6.7- Repairing documents
