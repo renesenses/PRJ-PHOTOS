@@ -9,6 +9,7 @@ use File::Spec;
 use File::Copy;
 use File::Find;
 use Data::Dumper;
+#use Digest::MD5;
 
 use strict;
 
@@ -88,17 +89,18 @@ use strict;
 # CONSTANTS
 ##########################################################################################
 
-my $CSV_T_IMAGES 			= "/Users/LochNessIT/tmp/filemaker/RECORDS_4_IMPORT/T_IMAGES.csv";
+my $CSV_T_IMAGES 			= "/Users/bertrand/GIT_REPO/PRJ-PHOTOS/check-scans/filemaker/RECORDS_4_IMPORT/T_IMAGES.csv";
 
 # WITH NAS
 my $BACKUP_VOLUME 			= "/Volumes/BACKUP";
+# my $BACKUP_ENV_LOCATION 	= "/SAUVEGARDES/IMAGES/TEST_MINOLTA";
 my $BACKUP_ENV_LOCATION 	= "/SAUVEGARDES/IMAGES/MINOLTA";
 # my $BACKUP_ENV 				= "/TEST"; # For testing
 # my $ENV 					= "MINOLTA"; # For production
 
 my $BACKUP_HOME_ENV			= File::Spec->catdir( $BACKUP_VOLUME, $BACKUP_ENV_LOCATION ); 
 my @BACKUP_HOME_ENV			= File::Spec->splitdir( $BACKUP_HOME_ENV );
-my $DIM_BACKUP_HOME_ENV		= $#BACKUP_HOME_ENV+1 ; # (5)
+my $DIM_BACKUP_HOME_ENV		= $#BACKUP_HOME_ENV ; # (5)
 
 # my $BACKUP_DIR			= File::Spec->catdir( $BACKUP_VOLUME, $BACKUP_ENV_LOCATION, $BACKUP_ENV );
 
@@ -294,12 +296,22 @@ sub build_REC_FILE {
 				$rec_file->{rep1}				= $dir_array[$DIM_BACKUP_HOME_ENV+2];
 				$rec_file->{rep2}				= $dir_array[$DIM_BACKUP_HOME_ENV+1];
 				$rec_file->{rep3}				= $dir_array[$DIM_BACKUP_HOME_ENV];
-				$rec_file->{md5}				= compute_md5_file($File::Find::name);
+#				$rec_file->{md5}				= compute_md5_file($File::Find::name);
 				$rec_file->{status}				= "Créée";
 				
 				my $keywords_val 				= $exifTool_object->GetValue('Keywords', 'ValueConv');
-								
-				$rec_file->{read_source}		= $$keywords_val[2];	
+				
+				
+#				print scalar(@{ $keywords_val }),"\n"; # DEBUD
+				
+				if ( (ref $keywords_val eq 'ARRAY') && (scalar(@{ $keywords_val }) == 3) ) {			
+					$rec_file->{read_source}	= $$keywords_val[2];
+				}			
+				else {
+					$rec_file->{read_source}	= "";
+				}
+				
+#				$rec_file->{read_source}		= $$keywords_val[2];	
 								
 				my @temp						= split(" ",$rec_file->{rep1});
 			
@@ -331,7 +343,7 @@ sub create_csv_T_IMAGES {
 
  	open my $csv, '+>', $CSV_T_IMAGES or die "Can't open '$CSV_T_IMAGES': $!";
 
-	printf $csv "IMG_ID,IMG_FULL_FILENAME,IMG_FILENAME,IMG_SEQUENCE,IMG_EXT,IMG_FORMAT,IMG_ORIENTATION,IMG_FILESIZE,IMG_DATE,IMG_MD5,IMG_STATUS,IMG_DIR1,IMG_DIR2,IMG_DIR3,IMG_SOURCE\n";
+	printf $csv "IMG_ID,IMG_FULL_FILENAME,IMG_FILENAME,IMG_SEQUENCE,IMG_EXT,IMG_FORMAT,IMG_ORIENTATION,IMG_FILESIZE,IMG_DATE,IMG_STATUS,IMG_DIR1,IMG_DIR2,IMG_DIR3,IMG_SOURCE\n";
 
 	# a sort can be usefull !!
 	
@@ -347,7 +359,7 @@ sub create_csv_T_IMAGES {
 		print $csv $REC_FILE{$line}->{file_size},",";	 		# IMG_FILESIZE		
 		print $csv $REC_FILE{$line}->{date},",";	  			# IMG_DATE
 #		print $csv $REC_FILE{$line}->{month},",";		 		# IMG_MONTH
-		print $csv $REC_FILE{$line}->{md5},",";		 			# IMG_MD5
+#		print $csv $REC_FILE{$line}->{md5},",";		 			# IMG_MD5
 		print $csv $REC_FILE{$line}->{status},",";	 			# IMG_STATUS
 		print $csv $REC_FILE{$line}->{rep1},",";	 			# IMG_DIR1
 		print $csv $REC_FILE{$line}->{rep2},",";	 			# IMG_DIR2
