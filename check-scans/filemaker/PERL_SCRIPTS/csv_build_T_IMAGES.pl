@@ -10,6 +10,9 @@ use File::Copy;
 use File::Find;
 use Data::Dumper;
 #use Digest::MD5;
+use utf8;
+use Encode::UTF8Mac;
+# use Encode qw(decode);
 
 use strict;
 
@@ -186,7 +189,11 @@ sub read_images {
 	$files_mod = 0;
 	init_proc_report($report_id, $proc, $dir);
 	
-	find(\&build_REC_FILE, $dir);
+	find( 	{ 
+				preprocess => sub { return map {  Encode::decode('utf-8-mac', $_)  } @_ }, 
+				wanted => \&build_REC_FILE,
+			},
+			$dir);
 
 	if ( $REC_REPORT{$report_id}{rep_status} ) {
 		print "Dossier ",$dir,",contenant ",$files_read," fichiers lus sur le NAS\n";
@@ -261,7 +268,6 @@ sub build_REC_FILE {
 			
     	}	
     	else {
-    	
     		# my ($file,$dir,$ext) 	= fileparse($File::Find::name, qr/\.[^.]*/);  
     		
     		my @dir_array 			= File::Spec->splitdir( $File::Find::dir );
@@ -341,7 +347,7 @@ sub build_REC_FILE {
 
 sub create_csv_T_IMAGES {
 
- 	open my $csv, '+>', $CSV_T_IMAGES or die "Can't open '$CSV_T_IMAGES': $!";
+ 	open my $csv, '+>:utf8', $CSV_T_IMAGES or die "Can't open '$CSV_T_IMAGES': $!";
 
 	printf $csv "IMG_ID,IMG_FULL_FILENAME,IMG_FILENAME,IMG_SEQUENCE,IMG_EXT,IMG_FORMAT,IMG_ORIENTATION,IMG_FILESIZE,IMG_DATE,IMG_STATUS,IMG_DIR1,IMG_DIR2,IMG_DIR3,IMG_SOURCE\n";
 
